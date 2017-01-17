@@ -13,7 +13,7 @@
  * 응용프로그램이 종료되어도 메시지는 브로커가 처리 한다.
 
 ### cons
- * request/response 같이 사용할 경우 network hops 이 증가 한다. (1 req/res = 2 network hops)
+ * request/response 같이 사용할 경우 network hops 가 증가 한다. (1 req/res = 4 network hops)
 
 ### solution
  * RabbitMQ(The Polyglot Broker) - pub/sub, rpc (amqp)
