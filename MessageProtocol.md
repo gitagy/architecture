@@ -24,6 +24,14 @@
  * transaction ?
  
 ## WAMP (pub/sub, rpc, websocket)
+ * 무엇인가?
+   * http://wamp-proto.org/why/
+   * http://www.slideshare.net/RyanEdge/wamp-47586205
+   * Model
+     * Caller-Callee (Client-Server)
+       * Dealer
+     * PubSub
+     * Router 는 브로커와 딜러의 조합
  * RPC 와 PubSub 이 하나의 프로토콜로...
    * 액션 실행(커맨드) = RPC
    * 알림(변경수신) - PubSub
