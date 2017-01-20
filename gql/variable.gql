@@ -1,0 +1,34 @@
+
+# http://sandbox.learngraphql.com/
+
+query getFewPosts($postCount: Int!, $commentCount: Int) {
+  recentPosts(count: $postCount) {
+    title,
+    ...comments
+  }
+}
+
+fragment comments on Post {
+  comments(limit: $commentCount) {
+    content
+  }
+}
+
+# query variables
+{
+  "postCount":1,
+  "commentCount":1
+}
+
+##################################################
+
+query getFewPosts($category: Category) {
+  posts(category: $category) {
+    title
+  }
+}
+
+# query variables
+{
+  "category": "PRODUCT"
+}

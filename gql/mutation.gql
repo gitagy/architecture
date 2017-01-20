@@ -1,0 +1,27 @@
+
+# http://sandbox.learngraphql.com/
+
+fragment authorInfo on Author
+{
+    name
+    twitterHandle
+}
+
+mutation {
+    ktlee2: createAuthor(
+        _id:"ktlee2",
+        name:"rekitae2",
+        twitterHandle:"@gitagy2"
+    ) {
+        ...authorInfo
+    }
+
+    ktlee3: createAuthor(
+        _id:"ktlee3",
+        name:"rekitae3",
+        twitterHandle:"@gitagy3"
+    ) {
+        ...authorInfo
+    }
+
+}

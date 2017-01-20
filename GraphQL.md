@@ -27,7 +27,12 @@
    * 서버는 훨씬 나은 대역폭이 있으므로 서버에서의 다중처리는 문제가 없다.
 
 ## Relay
- `Client(Relay <-> graphql-rest) <-> REST Server`
+ > Client(Relay <-> graphql-rest(?)) <-> REST Server`
  * React 를 위한 GraphQL 클라이언트 라이브러리
  * GraphQL 서버에서 데이터 가져오기를 추상화하는 플러그 형 전송 계층
- * 서버가 원격에서 실행될 필요가 없고, 클라이언트의 요소로써 패키지 된다.
+ * 서버가 원격에서 실행될 필요는 없고, 클라이언트의 요소로써 패키지 된다.
+
+## link
+ * awsome GraphQL https://github.com/chentsulin/awesome-graphql
+ * babel inline import https://github.com/quadric/babel-plugin-inline-Import
+   * support json, graphql, sql, text, raw and so on

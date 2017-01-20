@@ -1,0 +1,55 @@
+
+# http://sandbox.learngraphql.com/
+
+query {
+  recentPosts(count:1) {
+    title
+    ...authorInfo3
+  }
+    authors {
+      ...authorInfo
+    }
+    # alias 가 없으면 authors 가 key 가 된다.
+    alias: authors {
+        _id
+        name
+    }
+    author(_id: "pahan")
+    {
+        _id
+    }
+    # pahan 을 찾고
+    pahan:author(_id: "pahan")
+    {
+        _id
+        name
+    }
+    # ktlee 도 찾고
+    ktlee:author(_id:"ktlee")
+    {
+        _id
+        name
+    }
+    # 같은 key 는 argument 가 같다는 전제하에 merge 된다.
+    author(_id:"pahan")
+    {
+        ...authorInfo
+    }
+    alias3: authors {
+        ...authorInfo
+    }
+}
+
+fragment authorInfo on Author
+{
+    name
+    twitterHandle
+}
+
+fragment authorInfo3 on HasAuthor
+{
+    author {
+        _id
+        name
+    }
+}
