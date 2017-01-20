@@ -28,6 +28,7 @@
 
 ## Relay
  > Client(Relay <-> graphql-rest(?)) <-> REST Server`
+
  * React 를 위한 GraphQL 클라이언트 라이브러리
  * GraphQL 서버에서 데이터 가져오기를 추상화하는 플러그 형 전송 계층
  * 서버가 원격에서 실행될 필요는 없고, 클라이언트의 요소로써 패키지 된다.
