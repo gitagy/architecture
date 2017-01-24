@@ -1,6 +1,6 @@
 
 # GraphQL
-> GraphQL is an query for application.
+> GraphQL is an query for application and thin API layer,
 
 ## GraphQL 과 REST APIs
  * https://medium.com/chute-engineering/graphql-in-the-age-of-rest-apis-b10f2bf09bba#.tfhd9p82n
@@ -15,7 +15,7 @@
 ### 서버의 단방향 응답구조를 개선하여 클라이언트에게 유연성을 부여
 
 ### 클라이언트의 단편화된 요청 구문(REST API)을 다중화 시키고 커뮤니케이션 표준화를 꽤 한다.
- * React 와 Angular 에서 Rest API 는 많이 쪼개져 있고 클라이언트(브라우저)에서 여러번의 요청으로 하나의 업무가 완료도니다.
+ * React 와 Angular 에서 Rest API 는 많이 쪼개져 있고 클라이언트(브라우저)에서 여러번의 요청으로 하나의 업무가 완료된다.
    * REST API : 글 내용을 가져온다. 글 코멘트를 가져온다. 코멘트의 작성자 정보를 가져온다.
    * GraphQL : 글 내용과, 글 코멘트 그리고 코멘트 작성자 정보를 Query 로 정의해 가져온다. (exposed schme base)
 
@@ -26,7 +26,6 @@
 ## 예제
 ### 스키마 및 서버
 ```
-
 const Users = {
     ktlee:
     {   
