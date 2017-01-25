@@ -143,6 +143,7 @@ curl -X POST -H "Content-Type: application/graphql" -d 'query { users { name, ag
    * payload 커스터마이즈 설정 가능
    * webhook을 통해 zaiper 와 함께 수많은 타 서비스와 연계 가능
      * Slack 연동 https://www.graph.cool/docs/tutorials/slack-notifications-with-mutation-callbacks-dah6aifoce#1.1-setting-up-slack
+     * zaiper 지원 서비스 zapbook
         ![](img/2017-01-25-18-09-39.png)
      * 참고 https://enumgames.slack.com/archives/study-meshup
 
