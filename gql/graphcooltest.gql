@@ -1,0 +1,107 @@
+
+mutation {
+  createUser (
+    name: "ktlee",
+    age: 30
+  ) {
+    id
+    name
+  }
+}
+
+{
+  "data": {
+    "createUser": {
+      "id": "ciyb9lsvemlkg01952nqypvi2",
+      "name": "ktlee"
+    }
+  }
+}
+
+##################################################
+
+mutation {
+  createBlog (
+    subject: "나는 누구 인가?"
+    category: "철학"
+    content: "너는 누구고 나는 누구인가?"
+    userId: "ciyb9lsvemlkg01952nqypvi2"
+  ) {
+    id
+    subject
+    category
+    content
+    user {
+      id
+      name
+    }
+  }
+}
+
+{
+  "data": {
+    "createBlog": {
+      "subject": "나는 누구 인가?",
+      "id": "ciyb9vihbp6vn01930gd0pzm7",
+      "content": "너는 누구고 나는 누구인가?",
+      "category": "철학",
+      "user": {
+        "id": "ciyb9lsvemlkg01952nqypvi2",
+        "name": "lee ki tae"
+      }
+    }
+  }
+}
+
+##################################################
+
+query {
+  User(id: "ciyb9lsvemlkg01952nqypvi2")
+  {
+    id
+    name
+    age
+    blogs {
+      createdAt
+      subject
+      category
+      content
+    }
+  }
+}
+
+{
+  "data": {
+    "User": {
+      "id": "ciyb9lsvemlkg01952nqypvi2",
+      "name": "lee ki tae",
+      "age": 30,
+      "blogs": [
+        {
+          "createdAt": "2017-01-24T08:41:07.000Z",
+          "subject": "나는 누구 인가?",
+          "category": "철학",
+          "content": "너는 누구고 나는 누구인가?"
+        }
+      ]
+    }
+  }
+}
+
+##################################################
+
+query {
+    allBlogs(first: 3) {
+        id
+        subject
+        category
+        content
+        user {
+            id
+            name
+            age
+        }
+    }
+}
+
+##################################################
