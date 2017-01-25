@@ -3,7 +3,7 @@
 > GraphQL is an query for application and thin API layer,
 
 ## GraphQL 과 REST APIs
- * https://medium.com/chute-engineering/graphql-in-the-age-of-rest-apis-b10f2bf09bba#.tfhd9p82n
+ * GraphQL in the age of REST APIs https://medium.com/chute-engineering/graphql-in-the-age-of-rest-apis-b10f2bf09bba#.tfhd9p82n
  * http://www.slideshare.net/deview/112rest-graph-ql-relay
 
 ## SOAP 이 REST 로 대체된 때를 생각해라
